@@ -1,23 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Landing</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-        img {
-            width: 100%;
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Landing</title>
+  <style>
+    /* Reset & Box-Sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Wrapper with relative positioning */
+    .wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Full-width image */
+    .wrapper img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Base Link Styles */
+    .link {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .link:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* SVG icon styling */
+    .link svg {
+      margin-right: 6px;
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Positioning each link */
+    .link-instagram {
+      bottom: 80px;
+      left: 20px;
+    }
+    .link-phone {
+      bottom: 50px;
+      left: 20px;
+    }
+    .link-email {
+      bottom: 20px;
+      left: 20px;
+    }
+  </style>
 </head>
 <body>
-    <img src="landing.png" alt="landing">
+  <div class="wrapper">
+    <img src="landing.png" alt="landing" />
+    
+    <!-- Instagram Link -->
+    <a class="link link-instagram" href="https://instagram.com/YourProfile" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.966.24 2.417.403.51.184.87.41 1.252.792.382.382.608.742.792 1.252.163.45.347 1.247.403 2.417.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.966-.403 2.417-.184.51-.41.87-.792 1.252-.382.382-.742.608-1.252.792-.45.163-1.247.347-2.417.403-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.966-.24-2.417-.403-.51-.184-.87-.41-1.252-.792-.382-.382-.608-.742-.792-1.252-.163-.45-.347-1.247-.403-2.417C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.966.403-2.417.184-.51.41-.87.792-1.252.382-.382.742-.608 1.252-.792.45-.163 1.247-.347 2.417-.403C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.766.127 4.752.308 3.89.646 3.048.984 2.273 1.485 1.636 2.122.999 2.76.498 3.536.16 4.378-.177 5.24-.358 6.254-.415 7.54-.472 8.82-.484 9.23-.484 12s.012 3.18.07 4.46c.057 1.286.238 2.3.576 3.162.338.842.839 1.617 1.476 2.254.637.637 1.412 1.138 2.254 1.476.862.338 1.876.519 3.162.576 1.28.057 1.69.07 4.46.07s3.18-.012 4.46-.07c1.286-.057 2.3-.238 3.162-.576.842-.338 1.617-.839 2.254-1.476.637-.637 1.138-1.412 1.476-2.254.338-.862.519-1.876.576-3.162.057-1.28.07-1.69.07-4.46s-.012-3.18-.07-4.46c-.057-1.286-.238-2.3-.576-3.162-.338-.842-.839-1.617-1.476-2.254-.637-.637-1.412-1.138-2.254-1.476C18.3.308 17.286.127 16 .07 14.72.012 14.311 0 12 0z"></path>
+        <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-8 3.999 3.999 0 0 1 0 8z"></path>
+        <circle cx="18.406" cy="5.594" r="1.44"></circle>
+      </svg>
+      Instagram
+    </a>
+
+    <!-- Phone Link -->
+    <a class="link link-phone" href="tel:+123456789">
+      <svg viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.2.48 2.5.74 3.83.74a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.33.26 2.63.74 3.83a1 1 0 0 1-.21 1.11l-2.2 2.2z"></path>
+      </svg>
+      Call Me
+    </a>
+
+    <!-- Email Link -->
+    <a class="link link-email" href="mailto:someone@example.com">
+      <svg viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"></path>
+      </svg>
+      Email Me
+    </a>
+  </div>
 </body>
 </html>
